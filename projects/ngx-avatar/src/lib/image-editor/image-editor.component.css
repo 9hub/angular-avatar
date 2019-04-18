@@ -1,0 +1,20 @@
+.container {
+  height: calc(31.250em - 3em);
+  width: calc(43.750em - 3em);
+}
+
+.image-to-edit {
+  max-width: 100%;
+}
+
+.preview {
+  height: 10em;
+  width: 10em;
+  overflow: hidden;
+  outline: rgb(87, 164, 252) solid 2px;
+}
+
+.hide {
+  visibility: hidden;
+  height: 0;
+}

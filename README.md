@@ -1,1 +1,1 @@
-# Avatar handling for angular projects
+#Avatar handler for angular projects

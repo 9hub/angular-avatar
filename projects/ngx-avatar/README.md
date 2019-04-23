@@ -56,7 +56,7 @@ import { NgxAvatarModule } from '@9hub/ngx-avatar'
 })
 ```
 
-Using our compnent on you Angular template:
+Using our component on you Angular template:
 
 ```html
 <ngx-avatar [avatarSrc]="myAvatar"></ngx-avatar>

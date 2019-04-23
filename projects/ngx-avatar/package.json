@@ -2,7 +2,7 @@
   "name": "@9hub/ngx-avatar",
   "version": "0.0.1",
   "description":"Angular library to handle user avatars.",
-  "keywords": ["Angular","Library","Avatar"],
+  "keywords": ["angular","typescript","library","avatar","angular-material","flex-layout"],
   "license": "MIT",
   "repository": {
     "type": "git",

@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-avatar';
-  avatarSrc = 'assets/images/default-user-image.svg'
+  avatarSrc = 'assets/images/default-user-image.svg';
 }

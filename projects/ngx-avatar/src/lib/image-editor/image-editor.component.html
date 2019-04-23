@@ -1,0 +1,48 @@
+<!-- Editor section -->
+<div class="container" [class.hide]="!webCamDisabled" fxLayout fxLayoutAlign="center" fxLayoutGap="10px"> 
+  <div class="edition-section" fxFlex="70%" fxLayout="column">
+    <div class="editor-container" fxFlex=80%>
+      <img id="image-to-edit" [src]="imageToEdit" alt="Image to edit">
+    </div>
+    <div fxFlex="20%" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="50px">
+      <input #file type="file" name="file" accept="image/*" hidden (change)="onFileChange($event)"/>
+      <button mat-fab color="primary" (click)="file.click()">
+        <mat-icon>folder</mat-icon>
+      </button>
+      <button mat-fab color="primary" (click)="enableWebcam()">
+        <mat-icon>photo_camera</mat-icon>
+      </button>
+    </div>
+  </div>
+  <div fxFlex="30%" fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="10x">
+    <div id="image-edited-preview" class="preview"></div>
+    <div fxFlex="70%" fxLayout="column" fxLayoutAlign="center" fxLayoutGap="10px">
+      <button mat-flat-button color="primary" (click)="saveEditedImage()">
+        <mat-icon>done</mat-icon>
+      </button>
+      <button mat-flat-button color="primary" (click)="resetEditor()">
+        <mat-icon>refresh</mat-icon>
+      </button>
+      <button mat-flat-button color="warn" (click)="closeEditor()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Webcam Section -->
+<div div class="container" *ngIf="!webCamDisabled" fxLayout fxLayoutAlign="center" fxLayoutGap="10px">
+  <webcam [height]="450" [width]="600" [trigger]="triggerObservable" (imageCapture)="handleImage($event)"
+          [allowCameraSwitch]="allowCameraSwitch" (initError)="handleInitError($event)"
+          [imageQuality]="1"
+  >
+  </webcam>
+  <div fxFlex="70%" fxLayout="column" fxLayoutAlign="center" fxLayoutGap="100px">
+    <button mat-fab color="primary" (click)="triggerSnapshot()">
+      <mat-icon>photo_camera</mat-icon>
+    </button>
+    <button mat-fab color="primary" (click)="disableWebcam()">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+  </div>
+</div>
